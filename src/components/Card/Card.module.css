@@ -19,13 +19,13 @@
   box-shadow: 0 0 0 3px var(--default-card-frame), 0 0 0 4px black;
 }
 
-.horizontal {
+.onBoard {
   align-items: flex-end;
   margin: 8px;
   width: 30%;
 }
 
-.horizontal::before {
+.onBoard::before {
   content: "";
   position: absolute;
   top: 0%;
@@ -36,20 +36,20 @@
   pointer-events: none;
 }
 
-.horizontal:hover {
+.onBoard:hover {
   transform: scale(1.05);
 }
 
-.horizontal.disabled {
+.onBoard.disabled {
   filter: grayscale(100%);
   transform: scale(0.8);
 }
 
-.horizontal.disabled:hover {
+.onBoard.disabled:hover {
   transform: scale(0.85);
 }
 
-.horizontal * {
+.onBoard * {
   z-index: 2;
   background-size: contain;
   background-position: center;
