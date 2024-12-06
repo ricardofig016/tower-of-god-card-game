@@ -2,7 +2,8 @@ import styles from "./Card.module.css";
 
 function Card({ cardData, direction, position = "no position provided" }) {
   if (!cardData) {
-    return null;
+    const cardClass = `${styles.card} ${styles.empty}`;
+    return <div className={cardClass}>{position}</div>;
   }
 
   if (direction === "horizontal") {
@@ -11,7 +12,7 @@ function Card({ cardData, direction, position = "no position provided" }) {
       boxShadow: `0 0 0 3px var(--${cardData.rarity}-card-frame), 0 0 0 4px black`,
     };
 
-    const positionCode = cardData.positions[0].trim().toLowerCase().replace(/ /g, "_");
+    const positionCode = cardData.positions[0].trim().toLowerCase().replace(/ /g, "_"); // TODO: this should be given by a prop
     const positionStyle = {
       backgroundImage: `url("/assets/images/icons/positions/${positionCode}.png")`,
     };
@@ -20,17 +21,13 @@ function Card({ cardData, direction, position = "no position provided" }) {
       backgroundImage: `url("/assets/images/icons/heart.png")`,
     };
 
-    const actionStyle = {
-      backgroundImage: `url("/assets/images/icons/action/${Math.random() < 0.5 ? "white" : "gray"}.png")`,
-    };
+    const cardClass = `${styles.card} ${styles.horizontal} ${Math.random() < 0.5 ? styles.disabled : ""}`;
 
     return (
-      <div className={styles.horizontal} style={cardStyle}>
+      <div className={cardClass} style={cardStyle}>
         <div style={positionStyle}></div>
-        <div className={styles.hitPoints} style={hitPointsStyle}>
-          {cardData.hitPoints}
-        </div>
-        <div style={actionStyle}></div>
+        <div style={hitPointsStyle}>{cardData.hitPoints}</div>
+        {/* <div style={actionStyle}></div> */}
       </div>
     );
   }

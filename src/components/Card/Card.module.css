@@ -1,13 +1,28 @@
-.horizontal {
+.card {
   position: relative;
   display: flex;
-  align-items: flex-end;
-  margin: 8px;
   background-size: cover;
   background-position: center;
   border: 1px solid black;
-  width: 30%;
   max-height: 100%;
+  cursor: pointer;
+  transition: transform 0.2s;
+  color: var(--secondary-text);
+}
+
+.empty {
+  align-items: center;
+  justify-content: center;
+  margin: 8px;
+  width: 30%;
+  background-color: var(--card-color);
+  box-shadow: 0 0 0 3px var(--default-card-frame), 0 0 0 4px black;
+}
+
+.horizontal {
+  align-items: flex-end;
+  margin: 8px;
+  width: 30%;
 }
 
 .horizontal::before {
@@ -21,22 +36,30 @@
   pointer-events: none;
 }
 
+.horizontal:hover {
+  transform: scale(1.05);
+}
+
+.horizontal.disabled {
+  filter: grayscale(100%);
+  transform: scale(0.8);
+}
+
+.horizontal.disabled:hover {
+  transform: scale(0.85);
+}
+
 .horizontal * {
   z-index: 2;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-  height: 20%;
+  height: 30%;
   flex-grow: 1;
   margin-bottom: 6px;
-  color: var(--secondary-text);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.4vw;
+  font-size: 1.25vw;
   /* border: 1px solid red; */
-}
-
-.horizontal .hitPoints {
-  height: 32%;
 }

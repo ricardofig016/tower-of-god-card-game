@@ -13,7 +13,7 @@ function Board() {
             <Card cardData={cards[0]} direction="horizontal" />
             <Card cardData={cards[0]} direction="horizontal" />
             <Card cardData={cards[0]} direction="horizontal" />
-            <Card cardData={cards[0]} direction="horizontal" />
+            <Card position="Fisherman" />
           </div>
           <div className={styles.frontline}>
             <Card cardData={cards[1]} direction="horizontal" />

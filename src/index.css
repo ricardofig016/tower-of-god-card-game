@@ -4,11 +4,16 @@
 
   --primary-text: black;
   --secondary-text: white;
+
   --line: #e3c100;
+
+  --card-color: #606060;
+
   --legendary-card-frame: #bfa300;
   --epic-card-frame: #6d0663;
   --rare-card-frame: #2661d7;
   --common-card-frame: #148e3b;
+  --default-card-frame: #838383;
 }
 
 body {
