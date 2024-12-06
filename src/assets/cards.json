@@ -1,0 +1,28 @@
+[
+  {
+    "id": "1_zahard",
+    "name": "Zahard",
+    "title": "The King of the Tower",
+    "rarity": "Legendary",
+    "actions": ["Deal 8 damage", "Deal 5 damage to a backline enemy"],
+    "passive": "Enemy fishermen deal -2 damage",
+    "hitPoints": 10,
+    "cost": 5,
+    "positions": ["Fisherman"],
+    "traits": [],
+    "affiliations": ["Great Warriors", "Irregulars"]
+  },
+  {
+    "id": "2_jue_viole_grace",
+    "name": "Jue Viole Grace",
+    "title": "The Slayer Candidate",
+    "rarity": "Epic",
+    "actions": ["Deal 2 damage to 3 enemies", "Spend 1 shinsu to deal 7 damage to an enemy"],
+    "passive": "When I take damage, refill 1 shinsu",
+    "hitPoints": 5,
+    "cost": 3,
+    "positions": ["Wave Controller"],
+    "traits": [],
+    "affiliations": ["FUG", "Irregulars"]
+  }
+]
