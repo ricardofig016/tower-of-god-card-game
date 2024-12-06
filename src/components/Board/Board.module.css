@@ -29,10 +29,10 @@
 .opponentField,
 .playerField {
   width: 50%;
-  height: 85%;
+  height: 90%;
   display: flex;
   flex-direction: column;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 
 /* using align-items: flex-end; on opponentSide (parent) instead of this
@@ -46,7 +46,7 @@
   height: 50%;
   display: flex;
   justify-content: space-evenly;
-  border: 1px solid green;
+  /* border: 1px solid green; */
 }
 
 .horizontalDash {

@@ -1,10 +1,11 @@
 :root {
   box-sizing: border-box;
+  font-size: 14px;
 
   --primary-text: black;
   --secondary-text: white;
   --line: #e3c100;
-  --legendary-card-frame: #e3c100;
+  --legendary-card-frame: #bfa300;
   --epic-card-frame: #6d0663;
   --rare-card-frame: #2661d7;
   --common-card-frame: #148e3b;
@@ -14,6 +15,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
+  overflow: hidden;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
