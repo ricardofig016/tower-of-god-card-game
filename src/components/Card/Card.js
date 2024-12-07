@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
 import styles from "./Card.module.css";
+import clickSound from "../../assets/audio/click.wav";
+// import hoverSound from "../../assets/audio/card_hover.wav";
 
 function Card({ isEmpty = false, id, rarity, position, hitPoints, display, isDisabled }) {
   if (isEmpty) {
@@ -25,7 +27,12 @@ function Card({ isEmpty = false, id, rarity, position, hitPoints, display, isDis
     const cardClass = `${styles.card} ${styles.onBoard} ${isDisabled ? styles.disabled : ""}`;
 
     return (
-      <div className={cardClass} style={cardStyle}>
+      <div
+        className={cardClass}
+        style={cardStyle}
+        onClick={() => new Audio(clickSound).play()}
+        // onMouseEnter={() => new Audio(hoverSound).play()}
+      >
         <div style={positionStyle}></div>
         <div style={hitPointsStyle}>{hitPoints}</div>
       </div>
